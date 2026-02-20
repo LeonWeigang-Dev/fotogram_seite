@@ -21,36 +21,54 @@
         </section>
 
         <section class="album">
-            <img role="button" aria-haspopup="dialog" aria-controls="myDialog" onclick="openDialog()" class="albumImage" src="./img/alaska.jpg" alt="Bild von Alaska">
-            <img role="button" aria-haspopup="dialog" aria-controls="myDialog" onclick="openDialog()" class="albumImage" src="./img/anime.jpg" alt="Stadt Bild im Anime Stil">
-            <img role="button" aria-haspopup="dialog" aria-controls="myDialog" onclick="openDialog()" class="albumImage" src="./img/atmosphere.jpg" alt="Bild von Wolken">
-            <img role="button" aria-haspopup="dialog" aria-controls="myDialog" onclick="openDialog()" class="albumImage" src="./img/blue_tit.jpg" alt="Bild von einer Blaumeise">
-            <img role="button" aria-haspopup="dialog" aria-controls="myDialog" onclick="openDialog()" class="albumImage" src="./img/hurricane.jpg" alt="Bild von einem Sturm vom Erdorbit">
-            <img role="button" aria-haspopup="dialog" aria-controls="myDialog" onclick="openDialog()" class="albumImage" src="./img/lake.jpg" alt="Bild von einem See">
-            <img role="button" aria-haspopup="dialog" aria-controls="myDialog" onclick="openDialog()" class="albumImage" src="./img/moorente.jpg" alt="Bild von einer Moorente">
-            <img role="button" aria-haspopup="dialog" aria-controls="myDialog" onclick="openDialog()" class="albumImage" src="./img/sea.jpg" alt="Bild von einem Mann, der auf einem Felsen am Meer steht">
-            <img role="button" aria-haspopup="dialog" aria-controls="myDialog" onclick="openDialog()" class="albumImage" src="./img/snow_bunting.jpg" alt="Bild von einem weißen Vogel namens Schneeammer">
-            <img role="button" aria-haspopup="dialog" aria-controls="myDialog" onclick="openDialog()" class="albumImage" src="./img/snow_leopard.jpg" alt="Bild von zwei Schnee-Leoparden">
-            <img role="button" aria-haspopup="dialog" aria-controls="myDialog" onclick="openDialog()" class="albumImage" src="./img/travel.jpg" alt="Bild von einem Gebirgspass">
-            <img role="button" aria-haspopup="dialog" aria-controls="myDialog" onclick="openDialog()" class="albumImage" src="./img/winter.jpg" alt="Bild von einem schneebedeckten Baum">
+            <img role="button" tabindex="0" aria-haspopup="dialog" aria-controls="myDialog" onclick="openDialog()" class="albumImage"
+                src="./img/alaska.jpg" alt="Bild von Alaska">
+            <img role="button" tabindex="0" aria-haspopup="dialog" aria-controls="myDialog" onclick="openDialog()" class="albumImage"
+                src="./img/anime.jpg" alt="Stadt Bild im Anime Stil">
+            <img role="button" tabindex="0" aria-haspopup="dialog" aria-controls="myDialog" onclick="openDialog()" class="albumImage"
+                src="./img/atmosphere.jpg" alt="Bild von Wolken">
+            <img role="button" tabindex="0" aria-haspopup="dialog" aria-controls="myDialog" onclick="openDialog()" class="albumImage"
+                src="./img/blue_tit.jpg" alt="Bild von einer Blaumeise">
+            <img role="button" tabindex="0" aria-haspopup="dialog" aria-controls="myDialog" onclick="openDialog()" class="albumImage"
+                src="./img/hurricane.jpg" alt="Bild von einem Sturm vom Erdorbit">
+            <img role="button" tabindex="0" aria-haspopup="dialog" aria-controls="myDialog" onclick="openDialog()" class="albumImage"
+                src="./img/lake.jpg" alt="Bild von einem See">
+            <img role="button" tabindex="0" aria-haspopup="dialog" aria-controls="myDialog" onclick="openDialog()" class="albumImage"
+                src="./img/moorente.jpg" alt="Bild von einer Moorente">
+            <img role="button" tabindex="0" aria-haspopup="dialog" aria-controls="myDialog" onclick="openDialog()" class="albumImage"
+                src="./img/sea.jpg" alt="Bild von einem Mann, der auf einem Felsen am Meer steht">
+            <img role="button" tabindex="0" aria-haspopup="dialog" aria-controls="myDialog" onclick="openDialog()" class="albumImage"
+                src="./img/snow_bunting.jpg" alt="Bild von einem weißen Vogel namens Schneeammer">
+            <img role="button" tabindex="0" aria-haspopup="dialog" aria-controls="myDialog" onclick="openDialog()" class="albumImage"
+                src="./img/snow_leopard.jpg" alt="Bild von zwei Schnee-Leoparden">
+            <img role="button" tabindex="0" aria-haspopup="dialog" aria-controls="myDialog" onclick="openDialog()" class="albumImage"
+                src="./img/travel.jpg" alt="Bild von einem Gebirgspass">
+            <img role="button" tabindex="0" aria-haspopup="dialog" aria-controls="myDialog" onclick="openDialog()" class="albumImage"
+                src="./img/winter.jpg" alt="Bild von einem schneebedeckten Baum">
         </section>
-        <dialog id="myDialog">
-            <header>
-                <h2 id="dialogTitle" aria-labelledby="dialogTitle" >Hier kommt der Name des Bildes hin</h2>
+        <dialog class="dialog" id="myDialog">
+            <header class="dialogHeader">
+                <h2 id="dialogTitle" aria-labelledby="dialogTitle">Hier kommt der Name des Bildes hin</h2>
+                <button class="closeButton" aria-label="Schließen" onclick="closeDialog()">
+                    <img src="./img/close_icon.svg" alt="X Button zum Schließen des Dialogs">
+                </button>
             </header>
-            <section>
-                <img src="./img/alaska.jpg" alt="Bild von Alaska">
-                <p>Hier kommt die Beschreibung des Bildes hin. Hier</p>
+            <section class="imgSection">
+                <img class="dialogImg" src="./img/alaska_scaled_up.jpg" alt="Bild von Alaska">
             </section>
-            <footer>
-                <button onclick="closeDialog()">Schließen</button>
+            <footer class="dialogFooter">
+                    <img tabindex="0" role="button" src="./img/button_left.png" alt="Button mit Pfeil nach links" class="navButtons"
+                        onclick="previousImage()">
+                <p id="imageCounter">1/12</p>
+                    <img tabindex="0" role="button" src="./img/button_right.png" alt="Button mit Pfeil nach rechts" class="navButtons"
+                        onclick="nextImage()">
             </footer>
         </dialog>
     </main>
     <footer>
         <section>
-        <img src="./img/da_Icon.png" alt="Developer Akademie Logo">
-        <img src="./img/DA.png" alt="Developer Akademie Schriftzug">
+            <img src="./img/da_Icon.png" alt="Developer Akademie Logo">
+            <img src="./img/DA.png" alt="Developer Akademie Schriftzug">
         </section>
         <p class="legalText">© 2026 Fotogram. Alle Rechte vorbehalten.</p>
     </footer>

@@ -12,7 +12,7 @@ let myImgs = [
     "travel.jpg",
     "winter.jpg"
 ];
-let myNames = [
+let myImgNames = [
     "Alaska",
     "Anime Stadt",
     "Atmosphärische Wolken",
