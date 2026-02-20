@@ -169,6 +169,19 @@ footer {
     border-radius: 50%;
 }
 
+@media (max-width: 900px) {
+    .dialog {
+        width: 60%;
+        height: 650px;
+        padding: 25px;
+    }
+    .dialogFooter {
+        align-items: start;
+        gap: 30px;
+        height: 80px;
+    }
+}
+
 
 @media (max-width: 768px) {
     header {
@@ -181,6 +194,13 @@ footer {
 
     h1 {
         font-size: 38px;
+    }
+    .dialogTitles {
+        font-size: 20px;
+    }
+    .navButtons {
+        width: 50px;
+        height: 50px;
     }
 }
 
@@ -196,6 +216,20 @@ footer {
     .albumImage {
         width: 120px;
         height: 120px;
+    }
+        .dialog {
+        width: 60%;
+        height: 550px;
+        padding: 20px;
+    }
+    .dialogFooter {
+        align-items: start;
+        gap: 20px;
+        height: 60px;
+        padding-top: 0;
+    }
+        .dialog {
+        width: 85%;
     }
 }
 
