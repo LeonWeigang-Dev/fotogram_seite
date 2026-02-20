@@ -117,6 +117,10 @@ footer {
     justify-content: space-between;
     align-items: center;
 }
+.dialogTitles {
+    font-size: 25px;
+    font-weight: bold;
+}
 
 .closeButton {
     width: 60px;
@@ -236,7 +240,7 @@ footer {
     }
 
     .dialog {
-        width: 60%;
+        width: 85%;
         height: 550px;
         padding: 20px;
     }
@@ -245,10 +249,6 @@ footer {
         align-items: start;
         height: 60px;
         padding-top: 0;
-    }
-
-    .dialog {
-        width: 85%;
     }
 }
 

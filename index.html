@@ -9,44 +9,21 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body onload="init()">
     <header>
         <nav>
             <img class="logo" src="./img/main_logo.svg" alt="Webseite Logo" class="logo">
         </nav>
     </header>
     <main>
-        <section>
+        <section class="introTitle">
             <h1>Your personal photo album</h1>
         </section>
 
-        <section class="album">
-            <img role="button" tabindex="0" aria-haspopup="dialog" aria-controls="myDialog" onclick="openDialog()"
-                class="albumImage" src="./img/alaska.jpg" alt="Bild von Alaska">
-            <img role="button" tabindex="0" aria-haspopup="dialog" aria-controls="myDialog" onclick="openDialog()"
-                class="albumImage" src="./img/anime.jpg" alt="Stadt Bild im Anime Stil">
-            <img role="button" tabindex="0" aria-haspopup="dialog" aria-controls="myDialog" onclick="openDialog()"
-                class="albumImage" src="./img/atmosphere.jpg" alt="Bild von Wolken">
-            <img role="button" tabindex="0" aria-haspopup="dialog" aria-controls="myDialog" onclick="openDialog()"
-                class="albumImage" src="./img/blue_tit.jpg" alt="Bild von einer Blaumeise">
-            <img role="button" tabindex="0" aria-haspopup="dialog" aria-controls="myDialog" onclick="openDialog()"
-                class="albumImage" src="./img/hurricane.jpg" alt="Bild von einem Sturm vom Erdorbit">
-            <img role="button" tabindex="0" aria-haspopup="dialog" aria-controls="myDialog" onclick="openDialog()"
-                class="albumImage" src="./img/lake.jpg" alt="Bild von einem See">
-            <img role="button" tabindex="0" aria-haspopup="dialog" aria-controls="myDialog" onclick="openDialog()"
-                class="albumImage" src="./img/moorente.jpg" alt="Bild von einer Moorente">
-            <img role="button" tabindex="0" aria-haspopup="dialog" aria-controls="myDialog" onclick="openDialog()"
-                class="albumImage" src="./img/sea.jpg" alt="Bild von einem Mann, der auf einem Felsen am Meer steht">
-            <img role="button" tabindex="0" aria-haspopup="dialog" aria-controls="myDialog" onclick="openDialog()"
-                class="albumImage" src="./img/snow_bunting.jpg" alt="Bild von einem weißen Vogel namens Schneeammer">
-            <img role="button" tabindex="0" aria-haspopup="dialog" aria-controls="myDialog" onclick="openDialog()"
-                class="albumImage" src="./img/snow_leopard.jpg" alt="Bild von zwei Schnee-Leoparden">
-            <img role="button" tabindex="0" aria-haspopup="dialog" aria-controls="myDialog" onclick="openDialog()"
-                class="albumImage" src="./img/travel.jpg" alt="Bild von einem Gebirgspass">
-            <img role="button" tabindex="0" aria-haspopup="dialog" aria-controls="myDialog" onclick="openDialog()"
-                class="albumImage" src="./img/winter.jpg" alt="Bild von einem schneebedeckten Baum">
+        <section id="images" class="album">
+
         </section>
-        <dialog class="dialog" id="myDialog">
+        <dialog  class="dialog" id="myDialog">
             <header class="dialogHeader">
                 <h2 class="dialogTitles" id="dialogTitle" aria-labelledby="dialogTitle">Hier kommt der Name des Bildes
                     hin</h2>
