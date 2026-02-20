@@ -11,6 +11,7 @@
     font-weight: bold;
     font-style: normal;
 }
+
 body {
     background-color: rgb(6, 23, 30);
     margin: 0;
@@ -99,6 +100,7 @@ footer {
     border-radius: 50em / 2em 2em 0 0;
     box-sizing: border-box;
 }
+
 .dialog {
     border: none;
     border-radius: 50px;
@@ -109,11 +111,13 @@ footer {
     height: 800px;
     max-width: 800px;
 }
+
 .dialogHeader {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
 .closeButton {
     width: 60px;
     height: 60px;
@@ -125,12 +129,14 @@ footer {
     padding-block: 0;
     padding-inline: 0;
 }
+
 .closeButton:hover {
     transform: scale(1.10);
     transition: transform 0.3s ease;
     background-color: #124253;
     border-radius: 50%;
 }
+
 .imgSection {
     display: flex;
     justify-content: center;
@@ -138,18 +144,21 @@ footer {
     height: 70%;
 
 }
+
 .dialogImg {
     max-width: 100%;
     max-height: 100%;
     border-radius: 20px;
 }
+
 .dialogFooter {
     display: flex;
     justify-content: center;
     flex-direction: row;
     gap: 65px;
-    
+
 }
+
 .navButton {
     width: 70px;
     height: 70px;
@@ -159,9 +168,11 @@ footer {
     border: none;
     border-radius: 50%;
 }
+
 .navButtons {
     cursor: pointer;
-}   
+}
+
 .navButtons:hover {
     transform: scale(1.10);
     transition: transform 0.3s ease;
@@ -175,6 +186,7 @@ footer {
         height: 650px;
         padding: 25px;
     }
+
     .dialogFooter {
         align-items: start;
         gap: 30px;
@@ -195,9 +207,11 @@ footer {
     h1 {
         font-size: 38px;
     }
+
     .dialogTitles {
         font-size: 20px;
     }
+
     .navButtons {
         width: 50px;
         height: 50px;
@@ -217,18 +231,21 @@ footer {
         width: 120px;
         height: 120px;
     }
-        .dialog {
+
+    .dialog {
         width: 60%;
         height: 550px;
         padding: 20px;
     }
+
     .dialogFooter {
         align-items: start;
         gap: 20px;
         height: 60px;
         padding-top: 0;
     }
-        .dialog {
+
+    .dialog {
         width: 85%;
     }
 }
