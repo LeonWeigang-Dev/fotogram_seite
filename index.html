@@ -20,9 +20,8 @@
             <h1>Your personal photo album</h1>
         </section>
 
-        <section id="images" class="album">
-
-        </section>
+        <section id="images" class="album"></section>
+        
         <dialog  class="dialog" id="myDialog">
             <header class="dialogHeader">
                 <h2 class="dialogTitles" id="dialogTitle" aria-labelledby="dialogTitle">Hier kommt der Name des Bildes
@@ -32,7 +31,7 @@
                 </button>
             </header>
             <section class="imgSection">
-                <img class="dialogImg" src="./img/alaska_scaled_up.jpg" alt="Bild von Alaska">
+                <img id="currentImg" class="dialogImg" src="" alt="">
             </section>
             <footer class="dialogFooter">
                 <img tabindex="0" role="button" src="./img/button_left.png" alt="Button mit Pfeil nach links"

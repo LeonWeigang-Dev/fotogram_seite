@@ -42,21 +42,11 @@ let myImgNames = [
 ];
 
 let currentImgIndex = 0;
+const dialogRef = document.getElementById("myDialog");
 
 function init() {
     imgRender();
-    renderTitles();
 }
-
-const dialogRef = document.getElementById("myDialog");
-
-function openDialog() {
-    dialogRef.showModal();
-}
-function closeDialog() {
-    dialogRef.close();
-}
-
 function imgRender() {
     let imageRef = document.getElementById("images");
     let htmlContent = "";
@@ -64,23 +54,41 @@ function imgRender() {
     for (let index = 0; index < myImgs.length; index++) {
         htmlContent += getImagesHtml(index);
     }
-    
-    imageRef.innerHTML = htmlContent; 
+    imageRef.innerHTML = htmlContent;
 }
 
 function getImagesHtml(index) {
     return `
-    <div class="imageContainer">
-        <img class="albumImage" src="./img/${myImgs[index]}" alt="${myImgDescriptions[index]}" onclick="openDialog()">
-    </div>`;
+        <img tabindex="0" class="albumImage" src="./img/${myImgs[index]}" 
+             alt="${myImgDescriptions[index]}" 
+             onclick="openDialog(${index})">  `;
 }
 
-function renderTitles() {
-    let titleRef = document.getElementById("dialogTitle");
-    let titleHtml = "";
+function openDialog(index) {
+    currentImgIndex = index;
 
-    for (let i = 0; i < myImgNames.length; i++) {
-        titleHtml += `<h2 class="dialogTitles">${myImgNames[i]}</h2>`;
-    }
-    titleRef.innerHTML = titleHtml;
+    let titleRef = document.getElementById("dialogTitle");
+    let imgRef = document.getElementById("currentImg");
+    let counterRef = document.getElementById("imageCounter");
+
+    titleRef.innerText = myImgNames[index];
+    imgRef.src = `./img/${myImgs[index]}`;
+    imgRef.alt = myImgDescriptions[index];
+    counterRef.innerText = `${index + 1} / ${myImgs.length}`;
+
+    dialogRef.showModal();
+}
+
+function closeDialog() {
+    dialogRef.close();
+}
+
+function nextImage() {
+    currentImgIndex = (currentImgIndex + 1) % myImgs.length;
+    openDialog(currentImgIndex);
+}
+
+function previousImage() {
+    currentImgIndex = (currentImgIndex - 1 + myImgs.length) % myImgs.length;
+    openDialog(currentImgIndex);
 }
