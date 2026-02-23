@@ -50,6 +50,7 @@ const dialogRef = document.getElementById("myDialog");
 function init() {
     imgRender();
 }
+
 function imgRender() {
     let imageRef = document.getElementById("images");
     let htmlContent = "";
@@ -80,13 +81,14 @@ function openDialog(index) {
     imgRef.src = `./img/${myImgs[index]}`;
     imgRef.alt = myImgDescriptions[index];
     counterRef.innerText = `${index + 1} / ${myImgs.length}`;
-
     dialogRef.showModal();
+    document.body.style.overflow = "hidden";
 }
 
 /**close the Dialog */
 function closeDialog() {
     dialogRef.close();
+    document.body.style.overflow = "";
 }
 
 /** render the next image in the Dialog */
