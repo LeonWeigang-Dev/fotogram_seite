@@ -44,7 +44,7 @@ let myImgNames = [
 let currentImgIndex = 0;
 const dialogRef = document.getElementById("myDialog");
 
-function init() {
+function init() {   
     imgRender();
 }
 function imgRender() {
@@ -59,9 +59,9 @@ function imgRender() {
 
 function getImagesHtml(index) {
     return `
-        <img tabindex="0" class="albumImage" src="./img/${myImgs[index]}" 
+        <img tabindex="0" role="button" class="albumImage" src="./img/${myImgs[index]}" 
              alt="${myImgDescriptions[index]}" 
-             onclick="openDialog(${index})">  `;
+             onclick="openDialog(${index})" onkeydown="if(event.key === 'Enter') openDialog(${index})" >  `;
 }
 
 function openDialog(index) {
