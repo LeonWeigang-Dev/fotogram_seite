@@ -59,7 +59,7 @@ function imgRender() {
 
 function getImagesHtml(index) {
     return `
-        <img tabindex="0" role="button" class="albumImage" src="./img/${myImgs[index]}" 
+        <img tabindex="0" aria-label="Gallerie Bilder" role="button" class="albumImage" src="./img/${myImgs[index]}" 
              alt="${myImgDescriptions[index]}" 
              onclick="openDialog(${index})" onkeyup ="if(event.key === 'Enter') openDialog(${index})" >  `;
 }

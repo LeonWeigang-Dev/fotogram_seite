@@ -36,10 +36,10 @@
                 <img id="currentImg" class="dialogImg" src="" alt="">
             </section>
             <footer class="dialogFooter" onclick="event.stopPropagation()">
-                <img tabindex="0" role="button" src="./img/button_left.png" alt="Button mit Pfeil nach links"
+                <img tabindex="0" aria-label="leftArrowButton" role="button" src="./img/button_left.png" alt="Button mit Pfeil nach links"
                     class="navButtons" onclick="previousImage()" onkeyup ="if(event.key === 'Enter') previousImage()" >
                 <p id="imageCounter">1/12</p>
-                <img tabindex="0" role="button" src="./img/button_right.png" alt="Button mit Pfeil nach rechts"
+                <img tabindex="0" aria-label="rightArrowButton" role="button" src="./img/button_right.png" alt="Button mit Pfeil nach rechts"
                     class="navButtons" onclick="nextImage()" onkeyup ="if(event.key === 'Enter') nextImage()" >
             </footer>
         </dialog>
