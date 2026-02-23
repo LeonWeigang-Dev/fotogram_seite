@@ -1,3 +1,5 @@
+
+/** Global defined Arrays */
 let myImgs = [
     "alaska_scaled_up.jpg",
     "anime_scaled_up.jpg",
@@ -44,6 +46,7 @@ let myImgNames = [
 let currentImgIndex = 0;
 const dialogRef = document.getElementById("myDialog");
 
+/** rendering photo gallery */
 function init() {
     imgRender();
 }
@@ -57,6 +60,7 @@ function imgRender() {
     imageRef.innerHTML = htmlContent;
 }
 
+/** return the HTML code for the photo gallery */
 function getImagesHtml(index) {
     return `
         <img tabindex="0" aria-label="Gallerie Bilder" role="button" class="albumImage" src="./img/${myImgs[index]}" 
@@ -64,6 +68,7 @@ function getImagesHtml(index) {
              onclick="openDialog(${index})" onkeyup ="if(event.key === 'Enter') openDialog(${index})" >  `;
 }
 
+/** opens the Dialog, render the bigger images and put the right text to it */
 function openDialog(index) {
     currentImgIndex = index;
 
@@ -79,15 +84,18 @@ function openDialog(index) {
     dialogRef.showModal();
 }
 
+/**close the Dialog */
 function closeDialog() {
     dialogRef.close();
 }
 
+/** render the next image in the Dialog */
 function nextImage() {
     currentImgIndex = (currentImgIndex + 1) % myImgs.length;
     openDialog(currentImgIndex);
 }
 
+/** render the previous image in the Dialog */
 function previousImage() {
     currentImgIndex = (currentImgIndex - 1 + myImgs.length) % myImgs.length;
     openDialog(currentImgIndex);

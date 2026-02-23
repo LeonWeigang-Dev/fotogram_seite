@@ -1,3 +1,4 @@
+/* Font Section */
 @font-face {
     font-family: 'Figtree';
     src: url('fonts/static/Figtree-Regular.ttf') format('truetype');
@@ -12,6 +13,7 @@
     font-style: normal;
 }
 
+/*Body Section*/
 body {
     background-color: rgb(6, 23, 30);
     margin: 0;
@@ -101,6 +103,7 @@ footer {
     box-sizing: border-box;
 }
 
+/* Dialog Section */
 .dialog {
     border: none;
     border-radius: 50px;
@@ -185,6 +188,7 @@ footer {
     border-radius: 50%;
 }
 
+/* Mediaquery Section for Responsiveness*/
 @media (max-width: 900px) {
     .dialog {
         width: 60%;

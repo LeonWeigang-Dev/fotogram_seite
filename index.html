@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
+<!-- Hier wird mit der Function Init die Gallerie reingeladen -->
+
 <body onload="init()">
     <header>
         <nav>
@@ -22,6 +24,7 @@
 
         <section id="images" aria-label="imageSection" class="album"></section>
 
+        <!-- Hier wird der Dialog reingeladen -->
         <dialog class="dialog" id="myDialog" onclick="closeDialog()" onkeydown="if(event.key === 'ArrowRight') nextImage(); 
                    if(event.key === 'ArrowLeft') previousImage();">
             <header class="dialogHeader" onclick="event.stopPropagation()">
