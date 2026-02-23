@@ -44,7 +44,7 @@ let myImgNames = [
 let currentImgIndex = 0;
 const dialogRef = document.getElementById("myDialog");
 
-function init() {   
+function init() {
     imgRender();
 }
 function imgRender() {
