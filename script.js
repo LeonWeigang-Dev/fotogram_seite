@@ -61,7 +61,7 @@ function getImagesHtml(index) {
     return `
         <img tabindex="0" role="button" class="albumImage" src="./img/${myImgs[index]}" 
              alt="${myImgDescriptions[index]}" 
-             onclick="openDialog(${index})" onkeydown="if(event.key === 'Enter') openDialog(${index})" >  `;
+             onclick="openDialog(${index})" onkeyup ="if(event.key === 'Enter') openDialog(${index})" >  `;
 }
 
 function openDialog(index) {

@@ -22,12 +22,13 @@
 
         <section id="images" class="album"></section>
 
-        <dialog class="dialog" id="myDialog" onclick="closeDialog()">
+        <dialog class="dialog" id="myDialog" onclick="closeDialog()" onkeydown="if(event.key === 'ArrowRight') nextImage(); 
+                   if(event.key === 'ArrowLeft') previousImage();" >
             <header class="dialogHeader" onclick="event.stopPropagation()">
                 <h2 class="dialogTitles" onclick="event.stopPropagation()" id="dialogTitle"
                     aria-labelledby="dialogTitle">Hier kommt der Name des Bildes
                     hin</h2>
-                <button class="closeButton" aria-label="Schließen" onclick="closeDialog()">
+                <button class="closeButton" aria-label="Schließen" onmouseup="closeDialog()" onkeyup="if(event.key === 'Enter' || event.key === ' ') { event.stopPropagation(); closeDialog(); }" >
                     <img src="./img/close_icon.svg" alt="X Button zum Schließen des Dialogs">
                 </button>
             </header>
@@ -36,10 +37,10 @@
             </section>
             <footer class="dialogFooter" onclick="event.stopPropagation()">
                 <img tabindex="0" role="button" src="./img/button_left.png" alt="Button mit Pfeil nach links"
-                    class="navButtons" onclick="previousImage()">
+                    class="navButtons" onclick="previousImage()" onkeyup ="if(event.key === 'Enter') previousImage()" >
                 <p id="imageCounter">1/12</p>
                 <img tabindex="0" role="button" src="./img/button_right.png" alt="Button mit Pfeil nach rechts"
-                    class="navButtons" onclick="nextImage()">
+                    class="navButtons" onclick="nextImage()" onkeyup ="if(event.key === 'Enter') nextImage()" >
             </footer>
         </dialog>
     </main>
